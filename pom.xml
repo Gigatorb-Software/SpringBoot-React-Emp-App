@@ -78,6 +78,34 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <groupId>com.microsoft.azure</groupId>
+        <artifactId>azure-webapp-maven-plugin</artifactId>
+        <version>2.5.0</version>
+        <configuration>
+          <subscriptionId>496e93eb-b3b0-4999-872b-15f6830d7f31</subscriptionId>
+          <resourceGroup>spring-boot-employee-rg</resourceGroup>
+          <appName>spring-boot-employee</appName>
+          <pricingTier>f1</pricingTier>
+          <region>eastus</region>
+          <runtime>
+            <os>window</os>
+            <webContainer>Java SE</webContainer>
+            <javaVersion>Java 8</javaVersion>
+          </runtime>
+          <deployment>
+            <resources>
+              <resource>
+                <type>jar</type>
+                <directory>${project.basedir}/target</directory>
+                <includes>
+                  <include>*.jar</include>
+                </includes>
+              </resource>
+            </resources>
+          </deployment>
+        </configuration>
+      </plugin>
     </plugins> 
   </build> 
 </project>
