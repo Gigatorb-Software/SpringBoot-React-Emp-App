@@ -89,7 +89,7 @@
           <pricingTier>f1</pricingTier>
           <region>eastus</region>
           <runtime>
-            <os>window</os>
+            <os>Windows</os>
             <webContainer>Java SE</webContainer>
             <javaVersion>Java 8</javaVersion>
           </runtime>
