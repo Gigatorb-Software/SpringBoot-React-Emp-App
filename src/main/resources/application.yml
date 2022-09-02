@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:sqlserver://cyfwm-twn-server.database.windows.net:1433;database=employeedb;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+    url: jdbc:sqlserver://cyfwmstwn-server.database.windows.net:1433;database=employeedb;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
     username: admin1
     password: Password@123
   jpa:
