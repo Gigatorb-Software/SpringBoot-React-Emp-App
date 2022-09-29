@@ -53,60 +53,6 @@
   <build> 
     <plugins>
       <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-resources-plugin</artifactId>
-        <version>3.1.0</version>
-        <executions>
-          <execution>
-            <id>copy-resources</id>
-            <phase>process-classes</phase>
-            <goals>
-              <goal>copy-resources</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>${basedir}/target/classes/static</outputDirectory>
-              <resources>
-                <resource>
-                  <directory>${basedir}/src/react-App/build</directory>
-                </resource>
-              </resources>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>com.microsoft.azure</groupId>
-        <artifactId>azure-webapp-maven-plugin</artifactId>
-        <version>2.5.0</version>
-        <configuration>
-          <subscriptionId>496e93eb-b3b0-4999-872b-15f6830d7f31</subscriptionId>
-          <resourceGroup>spring-boot-employee-rg</resourceGroup>
-          <appName>spring-boot-employee</appName>
-          <pricingTier>f1</pricingTier>
-          <region>eastus</region>
-          <runtime>
-            <os>Windows</os>
-            <webContainer>Java SE</webContainer>
-            <javaVersion>Java 8</javaVersion>
-          </runtime>
-          <deployment>
-            <resources>
-              <resource>
-                <type>jar</type>
-                <directory>${project.basedir}/target</directory>
-                <includes>
-                  <include>*.jar</include>
-                </includes>
-              </resource>
-            </resources>
-          </deployment>
-        </configuration>
-      </plugin>
-      <plugin>
 				<groupId>com.github.eirslett</groupId>
 				<artifactId>frontend-maven-plugin</artifactId>
 				<version>1.6</version>
@@ -140,7 +86,7 @@
 						</configuration>
 					</execution>
 				</executions>
-			</plugin>
+		</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
